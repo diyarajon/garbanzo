@@ -20,12 +20,13 @@
     }
 
     function populateRankings(json){
-
-        console.log(json);
         while(rankingsBody.firstChild){
             rankingsBody.removeChild(rankingsBody.firstChild);
         }
         // POpulate table
+        json.forEach((row)=> {
+            console.log(row);
+        });
     }
 
     document.addEventListener("DOMContentLoaded", () => {loadRankings();});
